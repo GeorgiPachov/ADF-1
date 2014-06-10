@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ProductEntriesView"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  SelectList="ProductEntries.PRODUCT_ENTRY_ID, 
+       ProductEntries.QUANTITY, 
+       ProductEntries.PRODUCT_ID"
+  FromList="FOODDB.PRODUCT_ENTRIES ProductEntries"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="ProductEntries"
+    Entity="com.gpachov.adf.foodrepo.model.ProductEntries"/>
+  <ViewAttribute
+    Name="ProductEntryId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProductEntryId"
+    EntityUsage="ProductEntries"
+    AliasName="PRODUCT_ENTRY_ID"/>
+  <ViewAttribute
+    Name="Quantity"
+    PrecisionRule="true"
+    EntityAttrName="Quantity"
+    EntityUsage="ProductEntries"
+    AliasName="QUANTITY"/>
+  <ViewAttribute
+    Name="ProductId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProductId"
+    EntityUsage="ProductEntries"
+    AliasName="PRODUCT_ID"/>
+  <ViewLinkAccessor
+    Name="RecipesView"
+    ViewLink="com.gpachov.adf.foodrepo.model.RecipesProductEntriesFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

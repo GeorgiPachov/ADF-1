@@ -1,0 +1,183 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>PRODUCT_ENTRIES</name>
+  <columns>
+    <column>
+      <name>PRODUCT_ENTRY_ID</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">15</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMERIC</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <identityProperties>
+        <generated>ALWAYS</generated>
+      </identityProperties>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>COLUMN1</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PRODUCTENTRIES</name>
+              <identifier class="java.math.BigDecimal">95794</identifier>
+              <schemaName>PMUSER</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>QUANTITY</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>INTEGER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <name>PRODUCT_ID</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">15</value>
+          </entry>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>PRODUCT_ENTRIES_PRODUCTS_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>PRODUCT_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PRODUCT_ENTRIES</name>
+            <schemaName>FOODDB</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>PMUSER</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PRODUCTS_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PRODUCTS</name>
+          <schemaName>FOODDB</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>PMUSER</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PRODUCT_ENTRIES_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>PRODUCT_ENTRY_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PRODUCT_ENTRIES</name>
+            <schemaName>FOODDB</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>PMUSER</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>PRODUCT_ENTRIES_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PRODUCT_ENTRIES</name>
+          <schemaName>FOODDB</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>FOODDB</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <name>PRODUCT_ENTRIES_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>PRODUCT_ENTRY_ID</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>FOODDB</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">Oracle</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>PRODUCTENTRIES</name>
+        <identifier class="java.math.BigDecimal">95794</identifier>
+        <schemaName>PMUSER</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <bufferMode>DEFAULT</bufferMode>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <percentFree>10</percentFree>
+        <tablespaceID class="oracle.javatools.db.ReferenceID">
+          <name>USERS</name>
+          <type>TABLESPACE</type>
+        </tablespaceID>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+    <entry>
+      <key>compression</key>
+      <value class="java.lang.Boolean">false</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>FOODDB</name>
+  </schema>
+</table>
