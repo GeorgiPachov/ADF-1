@@ -2,5 +2,9 @@
 <faces-config version="2.1" xmlns="http://java.sun.com/xml/ns/javaee">
   <application>
     <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
+    <resource-bundle>
+      <base-name>com.gpachov.adf.foodrepo.view.resources.ApplicationBundle</base-name>
+      <var>res</var>
+    </resource-bundle>
   </application>
 </faces-config>

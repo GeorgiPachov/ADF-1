@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="listRecipes.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/default.jsf" value="#{bindings.ptb1}" id="pt1">
+                <f:attribute name="panelText" value="Разгледай рецепти"/>
+                <f:facet name="body">
+                    <af:listView value="#{bindings.RecipeView2.collectionModel}" var="item"
+                                 emptyText="#{bindings.RecipeView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                 fetchSize="#{bindings.RecipeView2.rangeSize}" id="lv1">
+                        <af:listItem id="li1">
+                            <af:panelGroupLayout id="pgl1">
+                                <af:outputFormatted value="#{item.bindings.RecipeId.inputValue}" id="of1">
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.RecipeView2.hints.RecipeId.format}"/>
+                                </af:outputFormatted>
+                                <af:outputFormatted value="#{item.bindings.Author.inputValue}" id="of2"/>
+                                <af:outputFormatted value="#{item.bindings.Title.inputValue}" id="of3"/>
+                                <af:outputFormatted value="#{item.bindings.Description.inputValue}" id="of4"/>
+                                <af:outputFormatted value="#{item.bindings.Timetomake.inputValue}" id="of5">
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.RecipeView2.hints.Timetomake.format}"/>
+                                </af:outputFormatted>
+                            </af:panelGroupLayout>
+                        </af:listItem>
+                    </af:listView>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

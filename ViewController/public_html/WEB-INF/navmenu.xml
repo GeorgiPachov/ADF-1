@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns="http://myfaces.apache.org/trinidad/menu">
+  <itemNode id="itemNode_view1" label="label_view1" action="view1" focusViewId="/view1"/>
+  <itemNode id="itemNode_view2" label="label_view2" action="view2" focusViewId="/view2"/>
+  <itemNode id="itemNode_view1" label="label_view1" action="view1" focusViewId="/view1"/>
+  <itemNode id="itemNode_view2" label="label_view2" action="view2" focusViewId="/view2"/>
+</menu>

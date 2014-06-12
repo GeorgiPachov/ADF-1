@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ProductView"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  SelectList="Product.PRODUCT_ID, 
+       Product.NAME, 
+       Product.CALORIES_PER_GRAM, 
+       Product.GRAMS_PER_UNIT, 
+       Product.PRODUCT_ENTRY_ID"
+  FromList="FOODDB.PRODUCTS Product"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="Product"
+    Entity="com.gpachov.adf.foodrepo.model.Product"/>
+  <ViewAttribute
+    Name="ProductId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProductId"
+    EntityUsage="Product"
+    AliasName="PRODUCT_ID"/>
+  <ViewAttribute
+    Name="Name"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Product"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="CaloriesPerGram"
+    PrecisionRule="true"
+    EntityAttrName="CaloriesPerGram"
+    EntityUsage="Product"
+    AliasName="CALORIES_PER_GRAM"/>
+  <ViewAttribute
+    Name="GramsPerUnit"
+    PrecisionRule="true"
+    EntityAttrName="GramsPerUnit"
+    EntityUsage="Product"
+    AliasName="GRAMS_PER_UNIT"/>
+  <ViewAttribute
+    Name="ProductEntryId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProductEntryId"
+    EntityUsage="Product"
+    AliasName="PRODUCT_ENTRY_ID"/>
+  <ViewLinkAccessor
+    Name="ProductEntriesView"
+    ViewLink="com.gpachov.adf.foodrepo.model.ProductEntriesProductsFkAssoc1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

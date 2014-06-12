@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <af:pageTemplateDef var="attrs" definition="private">
+        <af:panelStretchLayout id="pt_psl1" inlineStyle="height:301px; width:1071px;">
+            <f:facet name="top">
+                <af:panelHeader text="#{attrs.panelText}" id="pt_ph1">
+                    <f:facet name="context"/>
+                    <f:facet name="menuBar">
+                        <af:navigationPane id="pt_np1" value="#{root_menu}" var="menu" hint="bar">
+                            <f:facet name="nodeStamp">
+                                <af:commandNavigationItem text="#{menu.label}" id="pt_cni1" action="#{menu.doAction}"/>
+                            </f:facet>
+                        </af:navigationPane>
+                    </f:facet>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="legend"/>
+                    <f:facet name="info"/>
+                </af:panelHeader>
+            </f:facet>
+        </af:panelStretchLayout>
+        <af:xmlContent>
+            <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+                <description/>
+                <display-name>navigation</display-name>
+                <attribute>
+                    <attribute-name>panelText</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value>CurrentPage</default-value>
+                </attribute>
+            </component>
+        </af:xmlContent>
+    </af:pageTemplateDef>
+</jsp:root>

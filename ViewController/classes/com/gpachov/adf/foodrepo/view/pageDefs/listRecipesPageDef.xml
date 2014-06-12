@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="listRecipesPageDef"
+                Package="com.gpachov.adf.foodrepo.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <page path="com.gpachov.adf.foodrepo.view.pageDefs.defaultPageDef" id="ptb1" Refresh="ifNeeded"/>
+    <iterator Binds="RecipeView2" RangeSize="25" DataControl="AppModuleDataControl" id="RecipeView2Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="RecipeView2Iterator" id="RecipeView2">
+      <nodeDefinition DefName="com.gpachov.adf.foodrepo.model.RecipeView" Name="RecipeView20">
+        <AttrNames>
+          <Item Value="RecipeId"/>
+          <Item Value="Author"/>
+          <Item Value="Title"/>
+          <Item Value="Description"/>
+          <Item Value="Timetomake"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

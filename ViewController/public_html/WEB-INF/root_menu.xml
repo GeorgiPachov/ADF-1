@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns="http://myfaces.apache.org/trinidad/menu">
+  <itemNode id="itemNode_main" label="НАЧАЛО" action="adfMenu_main" focusViewId="/main"/>
+  <itemNode id="itemNode_addRecipe" label="ДОБАВИ РЕЦЕПТА" action="adfMenu_addRecipe" focusViewId="/addRecipe"/>
+  <itemNode id="itemNode_listRecipes" label="ВИЖ ВСИЧКИ РЕЦЕПТИ" action="adfMenu_listRecipes"
+            focusViewId="/listRecipes"/>
+</menu>

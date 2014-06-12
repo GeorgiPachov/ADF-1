@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="addRecipePageDef"
+                Package="com.gpachov.adf.foodrepo.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <page path="com.gpachov.adf.foodrepo.view.pageDefs.defaultPageDef" id="ptb1" Refresh="ifNeeded"/>
+    <iterator Binds="RecipeView2" RangeSize="25" DataControl="AppModuleDataControl" id="RecipeView2Iterator"/>
+    <iterator Binds="RecipesView1" RangeSize="10" DataControl="AppModuleDataControl" id="RecipesView1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="RecipeView2Iterator" id="Author">
+      <AttrNames>
+        <Item Value="Author"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipeView2Iterator" id="Title">
+      <AttrNames>
+        <Item Value="Title"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipeView2Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipeView2Iterator" id="Timetomake">
+      <AttrNames>
+        <Item Value="Timetomake"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipeView2Iterator" id="Text">
+      <AttrNames>
+        <Item Value="Text"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipeView2Iterator" id="CreateAt">
+      <AttrNames>
+        <Item Value="CreateAt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipeView2Iterator" id="UpdateAt">
+      <AttrNames>
+        <Item Value="UpdateAt"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="RecipesView1Iterator" id="CreateInsert" InstanceName="AppModuleDataControl.RecipesView1"
+            DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

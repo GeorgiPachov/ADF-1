@@ -1,2 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2"></adfc-config>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="main">
+    <page>/main.jsf</page>
+  </view>
+  <view id="addRecipe">
+    <page>/addRecipe.jsf</page>
+  </view>
+  <view id="listRecipes">
+    <page>/listRecipes.jsf</page>
+  </view>
+  <control-flow-rule id="__9">
+    <from-activity-id>*</from-activity-id>
+    <control-flow-case id="__10">
+      <from-outcome>adfMenu_main</from-outcome>
+      <to-activity-id>main</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__11">
+      <from-outcome>adfMenu_addRecipe</from-outcome>
+      <to-activity-id>addRecipe</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__12">
+      <from-outcome>adfMenu_listRecipes</from-outcome>
+      <to-activity-id>listRecipes</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__16">
+    <description>Menu Model Managed Bean</description>
+    <managed-bean-name>root_menu</managed-bean-name>
+    <managed-bean-class>oracle.adf.view.rich.model.MDSMenuModel</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    <managed-property id="__17">
+      <property-name>createHiddenNodes</property-name>
+      <value>false</value>
+    </managed-property>
+    <managed-property id="__18">
+      <property-name>source</property-name>
+      <property-class>java.lang.String</property-class>
+      <value>/WEB-INF/root_menu.xml</value>
+    </managed-property>
+  </managed-bean>
+
+</adfc-config>

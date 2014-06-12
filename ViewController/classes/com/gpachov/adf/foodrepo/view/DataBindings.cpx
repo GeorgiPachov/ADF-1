@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.2.66.68" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.gpachov.adf.foodrepo.view" ClientType="Generic">
+  <pageMap>
+    <page path="/default.jsf" usageId="com_gpachov_adf_foodrepo_view_defaultPageDef"/>
+    <page path="/main.jsf" usageId="com_gpachov_adf_foodrepo_view_mainPageDef"/>
+    <page path="/navigation.jspx" usageId="com_gpachov_adf_foodrepo_view_navigationPageDef"/>
+    <page path="/addRecipe.jsf" usageId="com_gpachov_adf_foodrepo_view_addRecipePageDef"/>
+    <page path="/listRecipes.jsf" usageId="com_gpachov_adf_foodrepo_view_listRecipesPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_gpachov_adf_foodrepo_view_defaultPageDef"
+          path="com.gpachov.adf.foodrepo.view.pageDefs.defaultPageDef"/>
+    <page id="com_gpachov_adf_foodrepo_view_mainPageDef" path="com.gpachov.adf.foodrepo.view.pageDefs.mainPageDef"/>
+    <page id="com_gpachov_adf_foodrepo_view_navigationPageDef"
+          path="com.gpachov.adf.foodrepo.view.pageDefs.navigationPageDef"/>
+    <page id="com_gpachov_adf_foodrepo_view_addRecipePageDef"
+          path="com.gpachov.adf.foodrepo.view.pageDefs.addRecipePageDef"/>
+    <page id="com_gpachov_adf_foodrepo_view_listRecipesPageDef"
+          path="com.gpachov.adf.foodrepo.view.pageDefs.listRecipesPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="com.gpachov.adf.foodrepo.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

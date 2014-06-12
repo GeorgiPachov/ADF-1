@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageTemplateDefs xmlns="http://xmlns.oracle.com/adf/faces/rich/pagetemplate">
+  <pagetemplate-jsp-ui-def>/navTemplate.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/templateDef2.jsf</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/templateDef1.jsf</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/navigation.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/default.jsf</pagetemplate-jsp-ui-def>
+</pageTemplateDefs>

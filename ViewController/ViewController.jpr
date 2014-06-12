@@ -1,5 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <jpr:project xmlns:jpr="http://xmlns.oracle.com/ide/project">
+   <value n="ADFComponentWizard.LAST_TAG_NS_PREF" v="component"/>
+   <value n="ADFComponentWizard.LAST_TAGLIB_URI_PREF"/>
    <hash n="component-versions">
       <value n="oracle.adfdt.controller.migrate.TrinidadDatabindingsProjectMigrator" v="11.1.2.0.0"/>
       <value n="oracle.adfdtinternal.dvt.datapresdt.migration.DVTDataMapMigrator" v="11.1.1.1.0.3"/>
@@ -60,6 +62,7 @@
       <list n="technologyScope">
          <string v="ADF_FACES"/>
          <string v="ADFc"/>
+         <string v="ADFm"/>
          <string v="Database"/>
          <string v="Database-Modeling"/>
          <string v="JSF"/>
@@ -155,6 +158,15 @@
          <string v="Application1_Project1_webapp"/>
       </list>
    </hash>
+   <hash n="oracle.jdeveloper.runner.RunConfigurations">
+      <hash n="runConfigurationDefinitions">
+         <hash n="Default">
+            <value n="custom" v="false"/>
+            <value n="name" v="Default"/>
+            <url n="targetURL" path="public_html/main.jsf"/>
+         </hash>
+      </hash>
+   </hash>
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
@@ -225,6 +237,54 @@
             <value n="id" v="ADF DVT Faces Databinding MDS Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="Oracle JEWT"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Faces Databinding Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons Digester 1.8"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Resource Bundle Support"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Resource Bundle Variable Resolver"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JDeveloper Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Model Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle JDBC"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Connection Manager"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Oracle Domains"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <list n="libraryReferences">
          <hash>
@@ -293,6 +353,54 @@
          </hash>
          <hash>
             <value n="id" v="ADF DVT Faces Databinding MDS Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle JEWT"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Faces Databinding Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons Digester 1.8"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Resource Bundle Support"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Resource Bundle Variable Resolver"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JDeveloper Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Model Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle JDBC"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Connection Manager"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Oracle Domains"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -402,6 +510,16 @@
             <value n="URI" v="http://xmlns.oracle.com/adf/faces/rich/component"/>
             <value n="version" v="11"/>
          </hash>
+         <hash>
+            <hash n="baseLibrary">
+               <value n="name" v="ADF Data Visualization"/>
+               <value n="version" v="1.1"/>
+            </hash>
+            <value n="name" v="ADF Data Visualization"/>
+            <value n="taglibURL" v="@oracle.home@../oracle_common/modules/oracle.adf.view_12.1.2/dvt-faces.jar!/META-INF/bi.taglib.xml"/>
+            <value n="URI" v="http://xmlns.oracle.com/dss/adf/faces"/>
+            <value n="version" v="1.1"/>
+         </hash>
       </list>
    </hash>
    <hash n="oracle.jdevimpl.webapp.jsp.libraries.model.ProjectTagLibraries">
@@ -438,6 +556,17 @@
             <value n="tldURL" v="@oracle.home@../oracle_common/modules/oracle.adf.view_12.1.2/adf-richclient-impl-11.jar!/META-INF/afu.tld"/>
             <value n="URI" v="http://xmlns.oracle.com/adf/faces/rich"/>
             <value n="version" v="11"/>
+         </hash>
+         <hash>
+            <hash n="baseLibrary">
+               <value n="name" v="ADF Data Visualization"/>
+               <value n="version" v="1.1"/>
+            </hash>
+            <value n="jspVersion" v="2.1"/>
+            <value n="name" v="ADF Data Visualization"/>
+            <value n="tldURL" v="@oracle.home@../oracle_common/modules/oracle.adf.view_12.1.2/dvt-faces.jar!/META-INF/bi.tld"/>
+            <value n="URI" v="http://xmlns.oracle.com/dss/adf/faces"/>
+            <value n="version" v="1.1"/>
          </hash>
       </list>
    </hash>
