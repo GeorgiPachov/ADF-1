@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.1.2.66.68" id="DataControls"
+                    Package="com.gpachov.adf.foodrepo">
+  <AdapterDataControl id="SessionEJBBean" FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adfinternal.model.adapter.ejb.EjbDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="com.gpachov.adf.foodrepo.SessionEJBLocal"
+                      BeanClass="com.gpachov.adf.foodrepo.SessionEJBLocal"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="com.gpachov.adf.foodrepo.Products"/>
+      <TypeInfo FullName="com.gpachov.adf.foodrepo.ProductEntries"/>
+      <TypeInfo FullName="com.gpachov.adf.foodrepo.Recipes"/>
+    </CreatableTypes>
+    <Source>
+      <ejb-definition ejb-version="3.x" ejb-name="SessionEJB" ejb-type="Session"
+                      ejb-business-interface="com.gpachov.adf.foodrepo.SessionEJBLocal" ejb-interface-type="local"
+                      initial-context-factory="weblogic.jndi.WLInitialContextFactory"
+                      DataControlHandler="oracle.adf.model.adapter.bean.jpa.JPQLDataFilterHandler"
+                      AccessMode="scrollable" EagerPersist="false" xmlns="http://xmlns.oracle.com/adfm/adapter/ejb"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>
