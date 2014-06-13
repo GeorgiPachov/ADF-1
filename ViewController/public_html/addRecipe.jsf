@@ -8,6 +8,9 @@
                 <!--<f:attribute name="panelText" value="#{res['menu.addRecipe']}"/>-->
                 <f:attribute name="panelText" value="ДОБАВИ РЕЦЕПТА"/>
                 <f:facet name="body">
+                    <af:outputFormatted inlineStyle="font-size: 24px;" styleClass="normalText" value="Ако мислите, че имате рецепта, която би била от интерес за нашите посетители, моля добавете я като използвате формата долу. имайте предвид, че рецептата НЕ трябва да е някоя чужда рецепта копирана от друг сайт. Ако получим сигнал, че рецептата не е ваша - ще я изтрием незабавно.
+
+Моля, попълнете всички необходими полета. "></af:outputFormatted>
                     <af:panelFormLayout id="pfl1">
                         <af:inputText label="#{bindings.RecipeId.hints.label}"
                                       required="#{bindings.RecipeId.hints.mandatory}"

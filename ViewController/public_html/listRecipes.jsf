@@ -8,6 +8,8 @@
                 <!--<f:attribute name="panelText" value="#{res['menu.listRecipes']}"/>-->
                 <f:attribute name="panelText" value="ВИЖ ВСИЧКИ РЕЦЕПТИ"/>
                 <f:facet name="body">
+                    <af:outputFormatted value="Списък от всички добавени рецепти с линк към тях можете да видите тук:" styleClass="normalText"
+                                        inlineStyle="font-size: 24px; margin-top: 30px;" id="ot2"></af:outputFormatted>
                     <af:listView value="#{bindings.RecipesView1.collectionModel}" var="item"
                                  emptyText="#{bindings.RecipesView1.viewable ? 'No data to display.' : 'Access Denied.'}"
                                  fetchSize="#{bindings.RecipesView1.rangeSize}" id="lv1">

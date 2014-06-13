@@ -7,12 +7,11 @@
                 <f:attribute name="panelText" value="#{res['menu.main']}"/>
                 <f:facet name="body">
                     <af:panelBox id="pb1" inlineStyle="background-image: none;">
-                        <af:outputFormatted value="#{res['main.welcomeMessage']}"
+                        <af:outputFormatted value="#{res['main.welcomeMessage']}" styleClass="normalText"
                                             inlineStyle="font-size: 24px; margin-top: 30px;" id="ot1"></af:outputFormatted>
                         <af:spacer height="30" id="s1"/>
-                        <af:outputFormatted value="#{res['main.siteDescriptionMessage']}"
+                        <af:outputFormatted value="#{res['main.siteDescriptionMessage']}" styleClass="normalText"
                                             inlineStyle="font-size: 24px; margin-top: 30px;" id="ot2"></af:outputFormatted>
-                                            
                     </af:panelBox>
                 </f:facet>
             </af:pageTemplate>

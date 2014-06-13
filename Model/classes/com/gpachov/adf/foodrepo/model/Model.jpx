@@ -13,6 +13,8 @@
     <Attr Name="_jbo.TypeMapEntries" Value="Java"/>
     <Attr Name="_NamedConnection" Value="Oracle"/>
     <Attr Name="_appModuleNames0" Value="com.gpachov.adf.foodrepo.AppModule"/>
+    <Attr Name="_appModuleNames2" Value="com.gpachov.adf.foodrepo.model.AppModule"/>
+    <Attr Name="_appModuleNames1" Value="com.gpachov.adf.foodrepo.model.FoodAppModel"/>
   </DesignTime>
   <Containee
     Name="adf"
@@ -32,6 +34,18 @@
       <Attr Name="_VO" Value="true"/>
       <Attr Name="_VL" Value="true"/>
       <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="model"
+    PackageName="com.gpachov.adf.foodrepo.model"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+      <Attr Name="_AS" Value="true"/>
+      <Attr Name="_VO" Value="true"/>
+      <Attr Name="_AM" Value="true"/>
+      <Attr Name="_VL" Value="true"/>
     </DesignTime>
   </Containee>
 </JboProject>

@@ -13,4 +13,18 @@
          <Custom ns0:JDBCDataSource="java:comp/env/jdbc/OracleDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
       </AppModuleConfig>
    </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="com.gpachov.adf.foodrepo.model.FoodAppModule"/>
+   <AppModuleConfigBag ApplicationName="com.gpachov.adf.foodrepo.model.FoodAppModel">
+      <AppModuleConfig name="FoodAppModelLocal" jbo.project="com.gpachov.adf.foodrepo.model.Model" ApplicationName="com.gpachov.adf.foodrepo.model.FoodAppModel" DeployPlatform="LOCAL">
+         <Database jbo.TypeMapEntries="Java"/>
+         <Security AppModuleJndiName="com.gpachov.adf.foodrepo.model.FoodAppModel"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/OracleDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="FoodAppModelShared" jbo.project="com.gpachov.adf.foodrepo.model.Model" ApplicationName="com.gpachov.adf.foodrepo.model.FoodAppModel" DeployPlatform="LOCAL">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="Java"/>
+         <Security AppModuleJndiName="com.gpachov.adf.foodrepo.model.FoodAppModel"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/OracleDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
 </BC4JConfig>

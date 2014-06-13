@@ -16,49 +16,28 @@
   <ViewUsage
     Name="RecipesView1"
     ViewObjectName="com.gpachov.adf.foodrepo.model.RecipesView"/>
-  <ViewUsage
-    Name="ProductEntriesViewReadOnly1"
-    ViewObjectName="com.gpachov.adf.foodrepo.model.ProductEntriesViewReadOnly"/>
-  <ViewUsage
-    Name="RecipesViewReadOnly1"
-    ViewObjectName="com.gpachov.adf.foodrepo.model.RecipesViewReadOnly"/>
-  <ViewUsage
-    Name="ProductsViewReadOnly1"
-    ViewObjectName="com.gpachov.adf.foodrepo.model.ProductsViewReadOnly"/>
-  <ViewUsage
-    Name="ProductEntriesView2"
-    ViewObjectName="com.gpachov.adf.foodrepo.model.ProductEntriesView"/>
-  <ViewUsage
-    Name="RecipesView2"
-    ViewObjectName="com.gpachov.adf.foodrepo.model.RecipesView"/>
-  <ViewUsage
-    Name="RecipesViewReadOnly2"
-    ViewObjectName="com.gpachov.adf.foodrepo.model.RecipesViewReadOnly"/>
-  <ViewUsage
-    Name="ProductEntriesViewReadOnly2"
-    ViewObjectName="com.gpachov.adf.foodrepo.model.ProductEntriesViewReadOnly"/>
   <ViewLinkUsage
     Name="ProductEntriesProductsFkLink1"
     ViewLinkObjectName="com.gpachov.adf.foodrepo.model.ProductEntriesProductsFkLink"
     SrcViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.ProductsView1"
-    DstViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.ProductEntriesView2"
+    DstViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.ProductEntriesView1"
     Reversed="false"/>
   <ViewLinkUsage
     Name="RecipesProductEntriesFkLink1"
     ViewLinkObjectName="com.gpachov.adf.foodrepo.model.RecipesProductEntriesFkLink"
     SrcViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.ProductEntriesView1"
-    DstViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.RecipesView2"
+    DstViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.RecipesView1"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="RecipesProductEntriesFkLink1_1"
-    ViewLinkObjectName="com.gpachov.adf.foodrepo.model.RecipesProductEntriesFkLink1"
-    SrcViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.ProductEntriesViewReadOnly1"
-    DstViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.RecipesViewReadOnly2"
+    Name="ProductEntriesProductsFkAssoc1Link"
+    ViewLinkObjectName="com.gpachov.adf.foodrepo.model.ProductEntriesProductsFkAssoc1Link"
+    SrcViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.ProductsView1"
+    DstViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.ProductEntriesView1"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="ProductEntriesProductsFkLink1_1"
-    ViewLinkObjectName="com.gpachov.adf.foodrepo.model.ProductEntriesProductsFkLink1"
-    SrcViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.ProductsViewReadOnly1"
-    DstViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.ProductEntriesViewReadOnly2"
+    Name="RecipesProductEntriesFkAssoc1Link"
+    ViewLinkObjectName="com.gpachov.adf.foodrepo.model.RecipesProductEntriesFkAssoc1Link"
+    SrcViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.ProductEntriesView1"
+    DstViewUsageName="com.gpachov.adf.foodrepo.model.AppModule.RecipesView1"
     Reversed="false"/>
 </AppModule>
