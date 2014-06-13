@@ -6,7 +6,6 @@ import javax.annotation.Resource;
 
 import javax.ejb.SessionContext;
 import javax.ejb.Stateful;
-
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
 

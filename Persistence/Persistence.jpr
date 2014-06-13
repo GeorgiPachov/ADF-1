@@ -63,8 +63,12 @@
       <value n="ejbVersionMinor" v="0.1"/>
       <url n="weblogicEjbJarNodeURL" path="src/META-INF/weblogic-ejb-jar.xml"/>
    </hash>
+   <hash n="oracle.adfdtinternal.model.ide.settings.ADFMSettings">
+      <value n="hasDataControls" v="true"/>
+   </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
+         <string v="ADFm"/>
          <string v="Database"/>
          <string v="EJB"/>
          <string v="Java"/>
@@ -133,6 +137,18 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="JSR-227 API"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Model Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Model Generic Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Oracle XML Parser v2"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -144,6 +160,18 @@
          </hash>
          <hash>
             <value n="id" v="TopLink"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JSR-227 API"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Model Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Model Generic Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>

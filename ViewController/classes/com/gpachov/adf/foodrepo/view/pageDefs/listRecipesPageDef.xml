@@ -7,6 +7,12 @@
     <page path="com.gpachov.adf.foodrepo.view.pageDefs.defaultPageDef" id="ptb1" Refresh="ifNeeded"/>
     <iterator Binds="RecipeView2" RangeSize="25" DataControl="AppModuleDataControl" id="RecipeView2Iterator"/>
     <iterator Binds="RecipesView1" RangeSize="25" DataControl="AppModuleDataControl2" id="RecipesView1Iterator"/>
+    <iterator Binds="root" RangeSize="25" DataControl="SessionEJBBean" id="SessionEJBBeanIterator"/>
+    <accessorIterator MasterBinding="SessionEJBBeanIterator" Binds="recipesFindAll" RangeSize="25"
+                      DataControl="SessionEJBBean" BeanClass="com.gpachov.adf.foodrepo.Recipes"
+                      id="recipesFindAllIterator"/>
+    <searchRegion Binds="recipesFindAllIterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="recipesFindAllQuery"/>
   </executables>
   <bindings>
     <tree IterBinding="RecipeView2Iterator" id="RecipeView2">
@@ -27,6 +33,28 @@
           <Item Value="Title"/>
           <Item Value="Description"/>
           <Item Value="Timetomake"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="recipesFindAllIterator" id="recipesFindAll">
+      <nodeDefinition DefName="com.gpachov.adf.foodrepo.Recipes" Name="recipesFindAll0">
+        <AttrNames>
+          <Item Value="author"/>
+          <Item Value="createAt"/>
+          <Item Value="description"/>
+          <Item Value="recipeId"/>
+          <Item Value="timetomake"/>
+          <Item Value="title"/>
+          <Item Value="updateAt"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="productEntries"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="com.gpachov.adf.foodrepo.ProductEntries">
+        <AttrNames>
+          <Item Value="productEntryId"/>
+          <Item Value="quantity"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

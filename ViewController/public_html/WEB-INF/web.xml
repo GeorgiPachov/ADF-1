@@ -143,4 +143,10 @@
   <welcome-file-list>
     <welcome-file>/faces/main.jsf</welcome-file>
   </welcome-file-list>
+  <ejb-local-ref>
+    <ejb-ref-name>ejb/local/SessionEJB</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <local>com.gpachov.adf.foodrepo.SessionEJBLocal</local>
+    <ejb-link>SessionEJB</ejb-link>
+  </ejb-local-ref>
 </web-app>

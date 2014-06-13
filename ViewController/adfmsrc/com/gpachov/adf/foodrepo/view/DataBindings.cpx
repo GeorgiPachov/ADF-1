@@ -25,6 +25,7 @@
           path="com.gpachov.adf.foodrepo.view.pageDefs.untitled1PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
+    <dc id="SessionEJBBean" path="com.gpachov.adf.foodrepo.SessionEJBBean"/>
     <BC4JDataControl id="AppModuleDataControl" Package="com.gpachov.adf.foodrepo.model"
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
                      SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
