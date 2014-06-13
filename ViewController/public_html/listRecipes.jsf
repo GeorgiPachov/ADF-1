@@ -10,7 +10,32 @@
                 <f:facet name="body">
                     <af:outputFormatted value="Списък от всички добавени рецепти с линк към тях можете да видите тук:" styleClass="normalText"
                                         inlineStyle="font-size: 24px; margin-top: 30px;" id="ot2"></af:outputFormatted>
-                
+                    <af:listView value="#{bindings.recipesFindAll2.collectionModel}" var="item"
+                                 emptyText="#{bindings.recipesFindAll2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                 fetchSize="#{bindings.recipesFindAll2.rangeSize}" id="lv1">
+                        <af:listItem id="li1">
+                            <af:panelGroupLayout id="pgl1">
+                                <af:outputFormatted value="#{item.bindings.author.inputValue}" id="of1"/>
+                                <af:outputFormatted value="#{item.bindings.createAt.inputValue}" id="of2">
+                                    <af:convertDateTime pattern="#{bindings.recipesFindAll2.hints.createAt.format}"/>
+                                </af:outputFormatted>
+                                <af:outputFormatted value="#{item.bindings.description.inputValue}" id="of3"/>
+                                <af:outputFormatted value="#{item.bindings.recipeId.inputValue}" id="of4">
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.recipesFindAll2.hints.recipeId.format}"/>
+                                </af:outputFormatted>
+                                <af:outputFormatted value="#{item.bindings.timetomake.inputValue}" id="of5">
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.recipesFindAll2.hints.timetomake.format}"/>
+                                </af:outputFormatted>
+                                <af:outputFormatted value="#{item.bindings.title.inputValue}" id="of6"/>
+                                <af:outputFormatted value="#{item.bindings.updateAt.inputValue}" id="of7">
+                                    <af:convertDateTime pattern="#{bindings.recipesFindAll2.hints.updateAt.format}"/>
+                                </af:outputFormatted>
+                                <af:outputFormatted value="#{item.bindings.author.inputValue}" id="of8"/>
+                            </af:panelGroupLayout>
+                        </af:listItem>
+                    </af:listView>
                 </f:facet>
             </af:pageTemplate>
         </af:form>

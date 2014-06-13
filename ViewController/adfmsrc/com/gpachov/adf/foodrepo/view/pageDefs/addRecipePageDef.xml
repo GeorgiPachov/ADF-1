@@ -20,6 +20,9 @@
     <iterator Binds="RecipesView1" RangeSize="25" DataControl="AppModuleDataControl2" id="RecipesView1Iterator1"/>
     <methodIterator Binds="Recipes.result" DataControl="SessionEJBBean" RangeSize="25"
                     BeanClass="com.gpachov.adf.foodrepo.Recipes" id="RecipesIterator"/>
+    <iterator Binds="RecipesView" RangeSize="25" DataControl="FoodAppModelDataControl" id="RecipesViewIterator"/>
+    <searchRegion Binds="RecipesViewIterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="RecipesViewQuery"/>
   </executables>
   <bindings>
     <action IterBinding="RecipesView1Iterator" id="CreateInsert" InstanceName="AppModuleDataControl.RecipesView1"
@@ -177,5 +180,16 @@
         <Item Value="Recipes_updateAt"/>
       </AttrNames>
     </attributeValues>
+    <tree IterBinding="RecipesViewIterator" id="RecipesView">
+      <nodeDefinition DefName="com.gpachov.adf.foodrepo.model.RecipeView" Name="RecipesView0">
+        <AttrNames>
+          <Item Value="Author"/>
+          <Item Value="Title"/>
+          <Item Value="Description"/>
+          <Item Value="Timetomake"/>
+          <Item Value="Text"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

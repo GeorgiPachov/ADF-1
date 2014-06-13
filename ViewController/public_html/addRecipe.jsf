@@ -12,29 +12,30 @@
 
 Моля, попълнете всички необходими полета. "></af:outputFormatted>
                     <af:panelFormLayout id="pfl1">
-                        <af:inputText value="#{bindings.title.inputValue}" label="Заглавие"
-                                      required="#{bindings.title.hints.mandatory}"
+                        <af:inputText  label="Заглавие"
+                                      required="#{bindings.title.hints.mandatory}" readOnly="true"
                                       columns="#{bindings.title.hints.displayWidth}"
                                       maximumLength="#{bindings.title.hints.precision}"
                                       shortDesc="#{bindings.title.hints.tooltip}" id="it5">
                             <f:validator binding="#{bindings.title.validator}"/>
                         </af:inputText>
-                        <af:inputText value="#{bindings.author.inputValue}" label="Автор"
-                                      required="#{bindings.author.hints.mandatory}"
+                        <af:inputText  label="Автор"
+                                      required="#{bindings.author.hints.mandatory}" readOnly="true"
                                       columns="#{bindings.author.hints.displayWidth}"
                                       maximumLength="#{bindings.author.hints.precision}"
                                       shortDesc="#{bindings.author.hints.tooltip}" id="it1">
                             <f:validator binding="#{bindings.author.validator}"/>
                         </af:inputText>
-                        <af:inputText value="#{bindings.description.inputValue}" label="Стъпки за рецептата:"
-                                      required="#{bindings.description.hints.mandatory}"
+                        <af:inputText  label="Описание}"
+                                      required="#{bindings.description.hints.mandatory}" readOnly="true"
                                       columns="#{bindings.description.hints.displayWidth}"
                                       maximumLength="#{bindings.description.hints.precision}"
                                       shortDesc="#{bindings.description.hints.tooltip}" id="it2">
                             <f:validator binding="#{bindings.description.validator}"/>
                         </af:inputText>
-                        <af:inputText value="#{bindings.timetomake.inputValue}" label="Колко време отнема да се сготви?"
-                                      required="#{bindings.timetomake.hints.mandatory}"
+                        <af:inputText label="Колко време е необходимо за да се сготви?"
+                                      
+                                      required="#{bindings.timetomake.hints.mandatory}" readOnly="true"
                                       columns="#{bindings.timetomake.hints.displayWidth}"
                                       maximumLength="#{bindings.timetomake.hints.precision}"
                                       shortDesc="#{bindings.timetomake.hints.tooltip}" id="it4">

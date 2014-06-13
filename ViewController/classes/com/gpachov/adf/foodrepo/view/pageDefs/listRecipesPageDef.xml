@@ -68,5 +68,18 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <tree IterBinding="recipesFindAllIterator" id="recipesFindAll2">
+      <nodeDefinition DefName="com.gpachov.adf.foodrepo.Recipes" Name="recipesFindAll20">
+        <AttrNames>
+          <Item Value="author"/>
+          <Item Value="createAt"/>
+          <Item Value="description"/>
+          <Item Value="recipeId"/>
+          <Item Value="timetomake"/>
+          <Item Value="title"/>
+          <Item Value="updateAt"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

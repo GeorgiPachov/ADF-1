@@ -4,6 +4,9 @@ import java.util.List;
 
 import javax.ejb.Remote;
 
+import oracle.binding.AttributeContext;
+import oracle.binding.RowContext;
+
 @Remote
 public interface SessionEJB {
     Object queryByRange(String jpqlStmt, int firstResult, int maxResults);
@@ -23,4 +26,14 @@ public interface SessionEJB {
     void removeRecipes(Recipes recipes);
 
     List<Recipes> getRecipesFindAll();
+
+    boolean setAttributeValue(AttributeContext p0, Object p1);
+
+    Object createRowData(RowContext p0);
+
+    Object registerDataProvider(RowContext p0);
+
+    boolean removeRowData(RowContext p0);
+
+    void validate();
 }
