@@ -51,10 +51,20 @@
           <Item Value="productEntries"/>
         </Accessors>
       </nodeDefinition>
-      <nodeDefinition DefName="com.gpachov.adf.foodrepo.ProductEntries">
+      <nodeDefinition DefName="com.gpachov.adf.foodrepo.ProductEntries" Name="recipesFindAll1">
         <AttrNames>
           <Item Value="productEntryId"/>
           <Item Value="quantity"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="recipesFindAllIterator" id="recipesFindAll1">
+      <nodeDefinition DefName="com.gpachov.adf.foodrepo.Recipes" Name="recipesFindAll10">
+        <AttrNames>
+          <Item Value="author"/>
+          <Item Value="title"/>
+          <Item Value="description"/>
+          <Item Value="timetomake"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

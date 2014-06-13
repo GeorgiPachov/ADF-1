@@ -12,74 +12,37 @@
 
 Моля, попълнете всички необходими полета. "></af:outputFormatted>
                     <af:panelFormLayout id="pfl1">
-                        <af:inputText label="#{bindings.RecipeId.hints.label}"
-                                      required="#{bindings.RecipeId.hints.mandatory}"
-                                      columns="#{bindings.RecipeId.hints.displayWidth}"
-                                      maximumLength="#{bindings.RecipeId.hints.precision}"
-                                      shortDesc="#{bindings.RecipeId.hints.tooltip}" id="it1">
-                            <f:validator binding="#{bindings.RecipeId.validator}"/>
-                            <af:convertNumber groupingUsed="false" pattern="#{bindings.RecipeId.format}"/>
+                        <af:inputText value="#{bindings.title.inputValue}" label="Заглавие"
+                                      required="#{bindings.title.hints.mandatory}"
+                                      columns="#{bindings.title.hints.displayWidth}"
+                                      maximumLength="#{bindings.title.hints.precision}"
+                                      shortDesc="#{bindings.title.hints.tooltip}" id="it5">
+                            <f:validator binding="#{bindings.title.validator}"/>
                         </af:inputText>
-                        <af:inputText label="#{bindings.Author2.hints.label}"
-                                      required="#{bindings.Author2.hints.mandatory}"
-                                      columns="#{bindings.Author2.hints.displayWidth}"
-                                      maximumLength="#{bindings.Author2.hints.precision}"
-                                      shortDesc="#{bindings.Author2.hints.tooltip}" id="it2">
-                            <f:validator binding="#{bindings.Author2.validator}"/>
+                        <af:inputText value="#{bindings.author.inputValue}" label="Автор"
+                                      required="#{bindings.author.hints.mandatory}"
+                                      columns="#{bindings.author.hints.displayWidth}"
+                                      maximumLength="#{bindings.author.hints.precision}"
+                                      shortDesc="#{bindings.author.hints.tooltip}" id="it1">
+                            <f:validator binding="#{bindings.author.validator}"/>
                         </af:inputText>
-                        <af:inputText label="#{bindings.Title2.hints.label}"
-                                      required="#{bindings.Title2.hints.mandatory}"
-                                      columns="#{bindings.Title2.hints.displayWidth}"
-                                      maximumLength="#{bindings.Title2.hints.precision}"
-                                      shortDesc="#{bindings.Title2.hints.tooltip}" id="it3">
-                            <f:validator binding="#{bindings.Title2.validator}"/>
+                        <af:inputText value="#{bindings.description.inputValue}" label="Стъпки за рецептата:"
+                                      required="#{bindings.description.hints.mandatory}"
+                                      columns="#{bindings.description.hints.displayWidth}"
+                                      maximumLength="#{bindings.description.hints.precision}"
+                                      shortDesc="#{bindings.description.hints.tooltip}" id="it2">
+                            <f:validator binding="#{bindings.description.validator}"/>
                         </af:inputText>
-                        <af:inputText label="#{bindings.Description2.hints.label}"
-                                      required="#{bindings.Description2.hints.mandatory}"
-                                      columns="#{bindings.Description2.hints.displayWidth}"
-                                      maximumLength="#{bindings.Description2.hints.precision}"
-                                      shortDesc="#{bindings.Description2.hints.tooltip}" id="it4">
-                            <f:validator binding="#{bindings.Description2.validator}"/>
+                        <af:inputText value="#{bindings.timetomake.inputValue}" label="Колко време отнема да се сготви?"
+                                      required="#{bindings.timetomake.hints.mandatory}"
+                                      columns="#{bindings.timetomake.hints.displayWidth}"
+                                      maximumLength="#{bindings.timetomake.hints.precision}"
+                                      shortDesc="#{bindings.timetomake.hints.tooltip}" id="it4">
+                            <f:validator binding="#{bindings.timetomake.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.timetomake.format}"/>
                         </af:inputText>
-                        <af:inputText label="#{bindings.Timetomake2.hints.label}"
-                                      required="#{bindings.Timetomake2.hints.mandatory}"
-                                      columns="#{bindings.Timetomake2.hints.displayWidth}"
-                                      maximumLength="#{bindings.Timetomake2.hints.precision}"
-                                      shortDesc="#{bindings.Timetomake2.hints.tooltip}" id="it5">
-                            <f:validator binding="#{bindings.Timetomake2.validator}"/>
-                            <af:convertNumber groupingUsed="false" pattern="#{bindings.Timetomake2.format}"/>
-                        </af:inputText>
-                        <af:inputText label="#{bindings.Text2.hints.label}" required="#{bindings.Text2.hints.mandatory}"
-                                      columns="#{bindings.Text2.hints.displayWidth}"
-                                      maximumLength="#{bindings.Text2.hints.precision}"
-                                      shortDesc="#{bindings.Text2.hints.tooltip}" id="it6">
-                            <f:validator binding="#{bindings.Text2.validator}"/>
-                        </af:inputText>
-                        <af:inputDate label="#{bindings.CreateAt.hints.label}"
-                                      required="#{bindings.CreateAt.hints.mandatory}"
-                                      columns="#{bindings.CreateAt.hints.displayWidth}"
-                                      shortDesc="#{bindings.CreateAt.hints.tooltip}" id="id1">
-                            <f:validator binding="#{bindings.CreateAt.validator}"/>
-                            <af:convertDateTime pattern="#{bindings.CreateAt.format}"/>
-                        </af:inputDate>
-                        <af:inputDate label="#{bindings.UpdateAt.hints.label}"
-                                      required="#{bindings.UpdateAt.hints.mandatory}"
-                                      columns="#{bindings.UpdateAt.hints.displayWidth}"
-                                      shortDesc="#{bindings.UpdateAt.hints.tooltip}" id="id2">
-                            <f:validator binding="#{bindings.UpdateAt.validator}"/>
-                            <af:convertDateTime pattern="#{bindings.UpdateAt.format}"/>
-                        </af:inputDate>
-                        <af:inputText label="#{bindings.ProductEntryId.hints.label}"
-                                      required="#{bindings.ProductEntryId.hints.mandatory}"
-                                      columns="#{bindings.ProductEntryId.hints.displayWidth}"
-                                      maximumLength="#{bindings.ProductEntryId.hints.precision}"
-                                      shortDesc="#{bindings.ProductEntryId.hints.tooltip}" id="it7">
-                            <f:validator binding="#{bindings.ProductEntryId.validator}"/>
-                            <af:convertNumber groupingUsed="false" pattern="#{bindings.ProductEntryId.format}"/>
-                        </af:inputText>
-                        <f:facet name="footer">
-                            <af:button text="#{res['menu.addRecipeSubmitButton']}" id="b1"/>
-                        </f:facet>
+                        <af:button actionListener="#{bindings.Recipes.execute}" text="Recipes"
+                                   disabled="#{!bindings.Recipes.enabled}" id="b1"/>
                     </af:panelFormLayout>
                 </f:facet>
             </af:pageTemplate>

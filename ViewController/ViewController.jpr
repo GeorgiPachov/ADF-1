@@ -47,6 +47,14 @@
       <string v="oracle.bm.commonIde.data.project.ModelerProjectSettings/modelersContentSet"/>
    </list>
    <value n="defaultPackage" v="com.gpachov.adf.foodrepo.view"/>
+   <hash n="ejbModuleContainer">
+      <value n="ejbVersion" v="3.0"/>
+      <value n="ejbVersionMinor" v="0.1"/>
+      <url n="weblogicEjbJarNodeURL" path="src/META-INF/weblogic-ejb-jar.xml"/>
+   </hash>
+   <hash n="oracle.adfdtinternal.model.ide.settings.ADFMSettings">
+      <value n="hasDataControls" v="true"/>
+   </hash>
    <hash n="oracle.ide.model.DependencyConfiguration">
       <list n="dependencyList">
          <hash>
@@ -267,10 +275,6 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Oracle XML Parser v2"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="JDeveloper Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -300,6 +304,18 @@
          </hash>
          <hash>
             <value n="id" v="TopLink"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JSR-227 API"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Model Generic Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -393,10 +409,6 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Oracle XML Parser v2"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="JDeveloper Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -426,6 +438,18 @@
          </hash>
          <hash>
             <value n="id" v="TopLink"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JSR-227 API"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Model Generic Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -594,5 +618,10 @@
             <value n="version" v="1.1"/>
          </hash>
       </list>
+   </hash>
+   <hash n="oracle.toplink.workbench.addin">
+      <hash n="persistence-list">
+         <value n="jpa-version" v="2.0"/>
+      </hash>
    </hash>
 </jpr:project>

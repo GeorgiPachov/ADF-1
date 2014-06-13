@@ -3,13 +3,23 @@
                 Package="com.gpachov.adf.foodrepo.view.pageDefs">
   <parameters/>
   <executables>
-    <variableIterator id="variables"/>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="Recipes_author" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="Recipes_description" IsQueriable="false"/>
+      <variable Type="java.lang.Long" Name="Recipes_recipeId" IsQueriable="false"/>
+      <variable Type="java.math.BigDecimal" Name="Recipes_timetomake" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="Recipes_title" IsQueriable="false"/>
+      <variable Type="java.sql.Timestamp" Name="Recipes_createAt" IsQueriable="false"/>
+      <variable Type="java.sql.Timestamp" Name="Recipes_updateAt" IsQueriable="false"/>
+    </variableIterator>
     <page path="com.gpachov.adf.foodrepo.view.pageDefs.defaultPageDef" id="ptb1" Refresh="ifNeeded"/>
     <iterator Binds="RecipesView1" RangeSize="10" DataControl="AppModuleDataControl" id="RecipesView1Iterator"/>
     <iterator Binds="RecipeView1" RangeSize="25" DataControl="AppModuleDataControl1" id="RecipeView1Iterator"
               ChangeEventPolicy="ppr"/>
     <iterator Binds="RecipesView1_1" RangeSize="25" DataControl="AppModuleDataControl2" id="RecipesView1_1Iterator"/>
     <iterator Binds="RecipesView1" RangeSize="25" DataControl="AppModuleDataControl2" id="RecipesView1Iterator1"/>
+    <methodIterator Binds="Recipes.result" DataControl="SessionEJBBean" RangeSize="25"
+                    BeanClass="com.gpachov.adf.foodrepo.Recipes" id="RecipesIterator"/>
   </executables>
   <bindings>
     <action IterBinding="RecipesView1Iterator" id="CreateInsert" InstanceName="AppModuleDataControl.RecipesView1"
@@ -112,6 +122,59 @@
     <attributeValues IterBinding="RecipesView1Iterator1" id="ProductEntryId">
       <AttrNames>
         <Item Value="ProductEntryId"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="Recipes" RequiresUpdateModel="true" Action="invokeMethod" MethodName="Recipes"
+                  IsViewObjectMethod="false" DataControl="SessionEJBBean" ClassName="com.gpachov.adf.foodrepo.Recipes"
+                  ReturnName="data.SessionEJBBean.methodResults.Recipes_SessionEJBBean_Recipes_result">
+      <NamedData NDName="author" NDType="java.lang.String" NDValue="${bindings.Recipes_author}"/>
+      <NamedData NDName="createAt" NDType="java.sql.Timestamp" NDValue="${bindings.Recipes_createAt}"/>
+      <NamedData NDName="description" NDType="java.lang.String" NDValue="${bindings.Recipes_description}"/>
+      <NamedData NDName="productEntries" NDType="com.gpachov.adf.foodrepo.ProductEntries"/>
+      <NamedData NDName="recipeId" NDType="java.lang.Long" NDValue="${bindings.Recipes_recipeId}"/>
+      <NamedData NDName="timetomake" NDType="java.math.BigDecimal" NDValue="${bindings.Recipes_timetomake}"/>
+      <NamedData NDName="title" NDType="java.lang.String" NDValue="${bindings.Recipes_title}"/>
+      <NamedData NDName="updateAt" NDType="java.sql.Timestamp" NDValue="${bindings.Recipes_updateAt}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="author">
+      <AttrNames>
+        <Item Value="Recipes_author"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="description">
+      <AttrNames>
+        <Item Value="Recipes_description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="recipeId">
+      <AttrNames>
+        <Item Value="Recipes_recipeId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="timetomake">
+      <AttrNames>
+        <Item Value="Recipes_timetomake"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="title">
+      <AttrNames>
+        <Item Value="Recipes_title"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="persistEntity" RequiresUpdateModel="true" Action="invokeMethod" MethodName="persistEntity"
+                  IsViewObjectMethod="false" DataControl="SessionEJBBean"
+                  InstanceName="data.SessionEJBBean.dataProvider"
+                  ReturnName="data.SessionEJBBean.methodResults.persistEntity_SessionEJBBean_dataProvider_persistEntity_result">
+      <NamedData NDName="entity" NDValue="#{bindings}" NDType="java.lang.Object"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="createAt">
+      <AttrNames>
+        <Item Value="Recipes_createAt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="updateAt">
+      <AttrNames>
+        <Item Value="Recipes_updateAt"/>
       </AttrNames>
     </attributeValues>
   </bindings>
