@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ProductsViewReadOnly"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <SQLQuery><![CDATA[SELECT FooddbProducts.PRODUCT_ID,
+       FooddbProducts.NAME,
+       FooddbProducts.CALORIES_PER_GRAM,
+       FooddbProducts.GRAMS_PER_UNIT,
+       FooddbProducts.PRODUCT_ENTRY_ID
+FROM FOODDB.PRODUCTS FooddbProducts]]></SQLQuery>
+  <ViewAttribute
+    Name="ProductId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="15"
+    Scale="0"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="PRODUCT_ID"
+    Expression="PRODUCT_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="Name"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="20"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="NAME"
+    Expression="NAME"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CaloriesPerGram"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="CALORIES_PER_GRAM"
+    Expression="CALORIES_PER_GRAM"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="GramsPerUnit"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="GRAMS_PER_UNIT"
+    Expression="GRAMS_PER_UNIT"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="ProductEntryId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="15"
+    Scale="0"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="PRODUCT_ENTRY_ID"
+    Expression="PRODUCT_ENTRY_ID"
+    SQLType="NUMERIC"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="ProductId"/>
+  </AttrArray>
+  <ViewLinkAccessor
+    Name="ProductEntriesViewReadOnly"
+    ViewLink="com.gpachov.adf.ProductEntriesProductsFkLink1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

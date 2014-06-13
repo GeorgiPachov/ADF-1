@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ProductEntries"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="FOODDB.PRODUCT_ENTRIES"
+  AliasName="ProductEntries"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="ProductEntryId"
+    IsNotNull="true"
+    Precision="15"
+    Scale="0"
+    ColumnName="PRODUCT_ENTRY_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="FOODDB.PRODUCT_ENTRIES"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Quantity"
+    ColumnName="QUANTITY"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="FOODDB.PRODUCT_ENTRIES"/>
+  <Attribute
+    Name="ProductId"
+    IsNotNull="true"
+    Precision="15"
+    Scale="0"
+    ColumnName="PRODUCT_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="FOODDB.PRODUCT_ENTRIES"/>
+  <AccessorAttribute
+    Name="Products"
+    Association="com.gpachov.adf.foodrepo.ProductEntriesProductsFkAssoc"
+    AssociationEnd="com.gpachov.adf.foodrepo.ProductEntriesProductsFkAssoc.Products"
+    AssociationOtherEnd="com.gpachov.adf.foodrepo.ProductEntriesProductsFkAssoc.ProductEntries"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Recipes"
+    Association="com.gpachov.adf.foodrepo.RecipesProductEntriesFkAssoc"
+    AssociationEnd="com.gpachov.adf.foodrepo.RecipesProductEntriesFkAssoc.Recipes"
+    AssociationOtherEnd="com.gpachov.adf.foodrepo.RecipesProductEntriesFkAssoc.ProductEntries"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="ProductEntriesPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PRODUCT_ENTRIES_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.gpachov.adf.foodrepo.ProductEntries.ProductEntryId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ProductEntriesProductsFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRODUCTS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PRODUCT_ENTRIES_PRODUCTS_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.gpachov.adf.foodrepo.ProductEntries.ProductId"/>
+    </AttrArray>
+  </Key>
+</Entity>

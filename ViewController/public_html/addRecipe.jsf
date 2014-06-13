@@ -7,58 +7,45 @@
             <af:pageTemplate viewId="/default.jsf" value="#{bindings.ptb1}" id="pt1">
                 <f:attribute name="panelText" value="Добави рецепта"/>
                 <f:facet name="body">
-                    -
                     <af:panelFormLayout id="pfl1">
-                        <af:inputText label="#{bindings.Author.hints.label}"
-                                      required="#{bindings.Author.hints.mandatory}"
-                                      columns="#{bindings.Author.hints.displayWidth}"
-                                      maximumLength="#{bindings.Author.hints.precision}"
-                                      shortDesc="#{bindings.Author.hints.tooltip}" id="it1">
-                            <f:validator binding="#{bindings.Author.validator}"/>
+                        <af:inputText label="#{bindings.Author1.hints.label}"
+                                      required="#{bindings.Author1.hints.mandatory}"
+                                      columns="#{bindings.Author1.hints.displayWidth}"
+                                      maximumLength="#{bindings.Author1.hints.precision}"
+                                      shortDesc="#{bindings.Author1.hints.tooltip}" id="it1" autoSubmit="true">
+                            <f:validator binding="#{bindings.Author1.validator}"/>
                         </af:inputText>
-                        <af:inputText label="#{bindings.Title.hints.label}" required="#{bindings.Title.hints.mandatory}"
-                                      columns="#{bindings.Title.hints.displayWidth}"
-                                      maximumLength="#{bindings.Title.hints.precision}"
-                                      shortDesc="#{bindings.Title.hints.tooltip}" id="it2">
-                            <f:validator binding="#{bindings.Title.validator}"/>
+                        <af:inputText label="#{bindings.Title1.hints.label}"
+                                      required="#{bindings.Title1.hints.mandatory}"
+                                      columns="#{bindings.Title1.hints.displayWidth}"
+                                      maximumLength="#{bindings.Title1.hints.precision}"
+                                      shortDesc="#{bindings.Title1.hints.tooltip}" id="it2" autoSubmit="true">
+                            <f:validator binding="#{bindings.Title1.validator}"/>
                         </af:inputText>
-                        <af:inputText label="#{bindings.Description.hints.label}"
-                                      required="#{bindings.Description.hints.mandatory}"
-                                      columns="#{bindings.Description.hints.displayWidth}"
-                                      maximumLength="#{bindings.Description.hints.precision}"
-                                      shortDesc="#{bindings.Description.hints.tooltip}" id="it3">
-                            <f:validator binding="#{bindings.Description.validator}"/>
+                        <af:inputText label="#{bindings.Description1.hints.label}"
+                                      required="#{bindings.Description1.hints.mandatory}"
+                                      columns="#{bindings.Description1.hints.displayWidth}"
+                                      maximumLength="#{bindings.Description1.hints.precision}"
+                                      shortDesc="#{bindings.Description1.hints.tooltip}" id="it3" autoSubmit="true">
+                            <f:validator binding="#{bindings.Description1.validator}"/>
                         </af:inputText>
-                        <af:inputText label="#{bindings.Timetomake.hints.label}"
-                                      required="#{bindings.Timetomake.hints.mandatory}"
-                                      columns="#{bindings.Timetomake.hints.displayWidth}"
-                                      maximumLength="#{bindings.Timetomake.hints.precision}"
-                                      shortDesc="#{bindings.Timetomake.hints.tooltip}" id="it4">
-                            <f:validator binding="#{bindings.Timetomake.validator}"/>
-                            <af:convertNumber groupingUsed="false" pattern="#{bindings.Timetomake.format}"/>
+                        <af:inputText label="#{bindings.Timetomake1.hints.label}"
+                                      required="#{bindings.Timetomake1.hints.mandatory}"
+                                      columns="#{bindings.Timetomake1.hints.displayWidth}"
+                                      maximumLength="#{bindings.Timetomake1.hints.precision}"
+                                      shortDesc="#{bindings.Timetomake1.hints.tooltip}" id="it4" autoSubmit="true">
+                            <f:validator binding="#{bindings.Timetomake1.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.Timetomake1.format}"/>
                         </af:inputText>
-                        <af:inputText label="#{bindings.Text.hints.label}" required="#{bindings.Text.hints.mandatory}"
-                                      columns="#{bindings.Text.hints.displayWidth}"
-                                      maximumLength="#{bindings.Text.hints.precision}"
-                                      shortDesc="#{bindings.Text.hints.tooltip}" id="it5">
-                            <f:validator binding="#{bindings.Text.validator}"/>
+                        <af:inputText label="#{bindings.Text1.hints.label}" required="#{bindings.Text1.hints.mandatory}"
+                                      columns="#{bindings.Text1.hints.displayWidth}"
+                                      maximumLength="#{bindings.Text1.hints.precision}"
+                                      shortDesc="#{bindings.Text1.hints.tooltip}" id="it5" autoSubmit="true">
+                            <f:validator binding="#{bindings.Text1.validator}"/>
                         </af:inputText>
-                        <af:inputDate label="#{bindings.CreateAt.hints.label}"
-                                      required="#{bindings.CreateAt.hints.mandatory}"
-                                      columns="#{bindings.CreateAt.hints.displayWidth}"
-                                      shortDesc="#{bindings.CreateAt.hints.tooltip}" id="id1">
-                            <f:validator binding="#{bindings.CreateAt.validator}"/>
-                            <af:convertDateTime pattern="#{bindings.CreateAt.format}"/>
-                        </af:inputDate>
-                        <af:inputDate label="#{bindings.UpdateAt.hints.label}"
-                                      required="#{bindings.UpdateAt.hints.mandatory}"
-                                      columns="#{bindings.UpdateAt.hints.displayWidth}"
-                                      shortDesc="#{bindings.UpdateAt.hints.tooltip}" id="id2">
-                            <f:validator binding="#{bindings.UpdateAt.validator}"/>
-                            <af:convertDateTime pattern="#{bindings.UpdateAt.format}"/>
-                        </af:inputDate>
                         <f:facet name="footer">
-                            <af:button text="Submit"  action="#{bindings.CreateInsert}" id="b1"/>
+                            <af:button text="Добави рецепта!" id="b1" actionListener="#{bindings.Commit.execute}"
+                                       partialTriggers="pfl1"/>
                         </f:facet>
                     </af:panelFormLayout>
                 </f:facet>

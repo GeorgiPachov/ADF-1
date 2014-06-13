@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RecipeView"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  SelectList="Recipe.RECIPE_ID, 
+       Recipe.AUTHOR, 
+       Recipe.TITLE, 
+       Recipe.DESCRIPTION, 
+       Recipe.TIMETOMAKE, 
+       Recipe.TEXT, 
+       Recipe.CREATE_AT, 
+       Recipe.UPDATE_AT, 
+       Recipe.PRODUCT_ENTRY_ID"
+  FromList="FOODDB.RECIPES Recipe"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full">
+  <ViewAccessor
+    Name="ProductEntriesViewReadOnly1"
+    ViewObjectName="com.gpachov.adf.ProductEntriesViewReadOnly"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_ProductEntryId"
+    ListVOName="ProductEntriesViewReadOnly1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProductEntryId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ProductEntryId"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="Recipe"
+    Entity="com.gpachov.adf.Recipe"/>
+  <ViewAttribute
+    Name="RecipeId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="RecipeId"
+    EntityUsage="Recipe"
+    AliasName="RECIPE_ID"/>
+  <ViewAttribute
+    Name="Author"
+    PrecisionRule="true"
+    EntityAttrName="Author"
+    EntityUsage="Recipe"
+    AliasName="AUTHOR"/>
+  <ViewAttribute
+    Name="Title"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Title"
+    EntityUsage="Recipe"
+    AliasName="TITLE"/>
+  <ViewAttribute
+    Name="Description"
+    PrecisionRule="true"
+    EntityAttrName="Description"
+    EntityUsage="Recipe"
+    AliasName="DESCRIPTION"/>
+  <ViewAttribute
+    Name="Timetomake"
+    PrecisionRule="true"
+    EntityAttrName="Timetomake"
+    EntityUsage="Recipe"
+    AliasName="TIMETOMAKE"/>
+  <ViewAttribute
+    Name="Text"
+    IsQueriable="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Text"
+    EntityUsage="Recipe"
+    AliasName="TEXT"/>
+  <ViewAttribute
+    Name="CreateAt"
+    PrecisionRule="true"
+    EntityAttrName="CreateAt"
+    EntityUsage="Recipe"
+    AliasName="CREATE_AT"/>
+  <ViewAttribute
+    Name="UpdateAt"
+    PrecisionRule="true"
+    EntityAttrName="UpdateAt"
+    EntityUsage="Recipe"
+    AliasName="UPDATE_AT"/>
+  <ViewAttribute
+    Name="ProductEntryId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProductEntryId"
+    EntityUsage="Recipe"
+    AliasName="PRODUCT_ENTRY_ID"
+    LOVName="LOV_ProductEntryId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+</ViewObject>

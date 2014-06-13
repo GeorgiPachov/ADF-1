@@ -2,4 +2,6 @@
 <MetadataDirectory xmlns="http://xmlns.oracle.com/adfm/metainf" version="11.1.1.0.0">
    <BusinessComponentServiceRegistry path="com/gpachov/adf/foodrepo/model/common/bc4j.xcfg"/>
    <BusinessComponentProjectRegistry path="com/gpachov/adf/foodrepo/model/Model.jpx"/>
+<BusinessComponentServiceRegistry path="com/gpachov/adf/common/bc4j.xcfg"/>
+<BusinessComponentServiceRegistry path="com/gpachov/adf/foodrepo/common/bc4j.xcfg"/>
 </MetadataDirectory>

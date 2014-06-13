@@ -12,12 +12,19 @@
     <Attr Name="_jprName" Value="../../../../../../Model.jpr"/>
     <Attr Name="_jbo.TypeMapEntries" Value="Java"/>
     <Attr Name="_NamedConnection" Value="Oracle"/>
-    <Attr Name="_appModuleNames0" Value="com.gpachov.adf.foodrepo.model.AppModule"/>
-    <Attr Name="_appModuleNames1" Value="com.gpachov.adf.foodrepo.model.FoodAppModel"/>
+    <Attr Name="_appModuleNames0" Value="com.gpachov.adf.foodrepo.AppModule"/>
   </DesignTime>
   <Containee
-    Name="model"
-    PackageName="com.gpachov.adf.foodrepo.model"
+    Name="adf"
+    PackageName="com.gpachov.adf"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VL" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="foodrepo"
+    PackageName="com.gpachov.adf.foodrepo"
     ObjectType="JboPackage">
     <DesignTime>
       <Attr Name="_EO" Value="true"/>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RecipesProductEntriesFkLink1"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge">
+  <ViewLinkDefEnd
+    Name="ProductEntriesViewReadOnly"
+    Cardinality="1"
+    Source="true"
+    Owner="com.gpachov.adf.ProductEntriesViewReadOnly">
+    <DesignTime>
+      <Attr Name="_finderName" Value="ProductEntriesViewReadOnly"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.gpachov.adf.ProductEntriesViewReadOnly.ProductEntryId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="RecipesViewReadOnly"
+    Cardinality="-1"
+    Owner="com.gpachov.adf.RecipesViewReadOnly">
+    <DesignTime>
+      <Attr Name="_finderName" Value="RecipesViewReadOnly"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.gpachov.adf.RecipesViewReadOnly.ProductEntryId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

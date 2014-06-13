@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RecipesProductEntriesFkLink1"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge">
+  <ViewLinkDefEnd
+    Name="ProductEntriesView1"
+    Cardinality="1"
+    Source="true"
+    Owner="com.gpachov.adf.foodrepo.ProductEntriesView1">
+    <DesignTime>
+      <Attr Name="_finderName" Value="ProductEntriesView1"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.gpachov.adf.foodrepo.ProductEntriesView1.ProductEntryId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="RecipesView1"
+    Cardinality="-1"
+    Owner="com.gpachov.adf.foodrepo.RecipesView1">
+    <DesignTime>
+      <Attr Name="_finderName" Value="RecipesView1"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.gpachov.adf.foodrepo.RecipesView1.ProductEntryId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

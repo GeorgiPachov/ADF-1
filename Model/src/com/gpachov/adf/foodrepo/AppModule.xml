@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="ProductEntriesView1"
+    ViewObjectName="com.gpachov.adf.foodrepo.ProductEntriesView"/>
+  <ViewUsage
+    Name="ProductsView1"
+    ViewObjectName="com.gpachov.adf.foodrepo.ProductsView"/>
+  <ViewUsage
+    Name="RecipesView1"
+    ViewObjectName="com.gpachov.adf.foodrepo.RecipesView"/>
+  <ViewUsage
+    Name="ProductsView1_1"
+    ViewObjectName="com.gpachov.adf.foodrepo.ProductsView1"/>
+  <ViewUsage
+    Name="ProductEntriesView1_1"
+    ViewObjectName="com.gpachov.adf.foodrepo.ProductEntriesView1"/>
+  <ViewUsage
+    Name="RecipesView1_1"
+    ViewObjectName="com.gpachov.adf.foodrepo.RecipesView1"/>
+  <ViewUsage
+    Name="ProductEntriesView2"
+    ViewObjectName="com.gpachov.adf.foodrepo.ProductEntriesView"/>
+  <ViewUsage
+    Name="RecipesView2"
+    ViewObjectName="com.gpachov.adf.foodrepo.RecipesView"/>
+  <ViewUsage
+    Name="ProductEntriesView1_2"
+    ViewObjectName="com.gpachov.adf.foodrepo.ProductEntriesView1"/>
+  <ViewUsage
+    Name="RecipesView1_2"
+    ViewObjectName="com.gpachov.adf.foodrepo.RecipesView1"/>
+  <ViewLinkUsage
+    Name="ProductEntriesProductsFkLink1"
+    ViewLinkObjectName="com.gpachov.adf.foodrepo.ProductEntriesProductsFkLink"
+    SrcViewUsageName="com.gpachov.adf.foodrepo.AppModule.ProductsView1"
+    DstViewUsageName="com.gpachov.adf.foodrepo.AppModule.ProductEntriesView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="RecipesProductEntriesFkLink1"
+    ViewLinkObjectName="com.gpachov.adf.foodrepo.RecipesProductEntriesFkLink"
+    SrcViewUsageName="com.gpachov.adf.foodrepo.AppModule.ProductEntriesView1"
+    DstViewUsageName="com.gpachov.adf.foodrepo.AppModule.RecipesView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ProductEntriesProductsFkLink1_1"
+    ViewLinkObjectName="com.gpachov.adf.foodrepo.ProductEntriesProductsFkLink1"
+    SrcViewUsageName="com.gpachov.adf.foodrepo.AppModule.ProductsView1_1"
+    DstViewUsageName="com.gpachov.adf.foodrepo.AppModule.ProductEntriesView1_2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="RecipesProductEntriesFkLink1_1"
+    ViewLinkObjectName="com.gpachov.adf.foodrepo.RecipesProductEntriesFkLink1"
+    SrcViewUsageName="com.gpachov.adf.foodrepo.AppModule.ProductEntriesView1_1"
+    DstViewUsageName="com.gpachov.adf.foodrepo.AppModule.RecipesView1_2"
+    Reversed="false"/>
+</AppModule>

@@ -52,20 +52,6 @@
     AssociationOtherEnd="com.gpachov.adf.foodrepo.model.RecipesProductEntriesFkAssoc.ProductEntries"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="Product"
-    Association="com.gpachov.adf.foodrepo.model.ProductEntriesProductsFkAssoc1"
-    AssociationEnd="com.gpachov.adf.foodrepo.model.ProductEntriesProductsFkAssoc1.Product"
-    AssociationOtherEnd="com.gpachov.adf.foodrepo.model.ProductEntriesProductsFkAssoc1.ProductEntries"
-    Type="com.gpachov.adf.foodrepo.model.ProductImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Recipe"
-    Association="com.gpachov.adf.foodrepo.model.RecipesProductEntriesFkAssoc1"
-    AssociationEnd="com.gpachov.adf.foodrepo.model.RecipesProductEntriesFkAssoc1.Recipe"
-    AssociationOtherEnd="com.gpachov.adf.foodrepo.model.RecipesProductEntriesFkAssoc1.ProductEntries"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
   <Key
     Name="ProductEntriesPk"
     PrimaryKey="true">

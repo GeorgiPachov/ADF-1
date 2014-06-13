@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="com.gpachov.adf.AppModule">
+      <AppModuleConfig name="146921DCB14" DBconnection="java:comp/env/jdbc/OracleDS" ApplicationName="com.gpachov.adf.AppModule" DeployPlatform="LOCAL" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" JDBCName="Oracle" BC4JConfigName="AppModuleLocal" jbo.project="com.gpachov.adf.foodrepo.model.Model">
+         <Database jbo.TypeMapEntries="Java" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="com.gpachov.adf.AppModule"/>
+         <Tester FullProxyInterfaceName="com.gpachov.adf.common.AppModule"/>
+         <Custom ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" ns0:_testers_credentials_needed="false" ns0:JDBCDataSource="java:comp/env/jdbc/OracleDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

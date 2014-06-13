@@ -7,6 +7,8 @@
     <page path="/navigation.jspx" usageId="com_gpachov_adf_foodrepo_view_navigationPageDef"/>
     <page path="/addRecipe.jsf" usageId="com_gpachov_adf_foodrepo_view_addRecipePageDef"/>
     <page path="/listRecipes.jsf" usageId="com_gpachov_adf_foodrepo_view_listRecipesPageDef"/>
+    <page path="/test.jsf" usageId="com_gpachov_adf_foodrepo_view_testPageDef"/>
+    <page path="/untitled1.jsf" usageId="com_gpachov_adf_foodrepo_view_untitled1PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="com_gpachov_adf_foodrepo_view_defaultPageDef"
@@ -18,9 +20,22 @@
           path="com.gpachov.adf.foodrepo.view.pageDefs.addRecipePageDef"/>
     <page id="com_gpachov_adf_foodrepo_view_listRecipesPageDef"
           path="com.gpachov.adf.foodrepo.view.pageDefs.listRecipesPageDef"/>
+    <page id="com_gpachov_adf_foodrepo_view_testPageDef" path="com.gpachov.adf.foodrepo.view.pageDefs.testPageDef"/>
+    <page id="com_gpachov_adf_foodrepo_view_untitled1PageDef"
+          path="com.gpachov.adf.foodrepo.view.pageDefs.untitled1PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="com.gpachov.adf.foodrepo.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl1" Package="com.gpachov.adf"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl2" Package="com.gpachov.adf.foodrepo"
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
                      SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
                      SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"

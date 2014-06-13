@@ -12,6 +12,7 @@
                         <af:spacer height="30" id="s1"/>
                         <af:outputFormatted value="#{res['main.siteDescriptionMessage']}"
                                             inlineStyle="font-size: 24px; margin-top: 30px;" id="ot2"></af:outputFormatted>
+                                            
                     </af:panelBox>
                 </f:facet>
             </af:pageTemplate>

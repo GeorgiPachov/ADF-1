@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RecipesView1"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <SQLQuery><![CDATA[SELECT FooddbRecipes.RECIPE_ID,
+       FooddbRecipes.AUTHOR,
+       FooddbRecipes.TITLE,
+       FooddbRecipes.DESCRIPTION,
+       FooddbRecipes.TIMETOMAKE,
+       FooddbRecipes.TEXT,
+       FooddbRecipes.CREATE_AT,
+       FooddbRecipes.UPDATE_AT,
+       FooddbRecipes.PRODUCT_ENTRY_ID
+FROM FOODDB.RECIPES FooddbRecipes]]></SQLQuery>
+  <ViewAttribute
+    Name="RecipeId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="15"
+    Scale="0"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="RECIPE_ID"
+    Expression="RECIPE_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="Author"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="20"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="AUTHOR"
+    Expression="AUTHOR"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Title"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="20"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="TITLE"
+    Expression="TITLE"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Description"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="20"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="DESCRIPTION"
+    Expression="DESCRIPTION"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Timetomake"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="TIMETOMAKE"
+    Expression="TIMETOMAKE"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="Text"
+    IsUpdateable="false"
+    IsQueriable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Type="java.sql.Blob"
+    ColumnType="BLOB"
+    AliasName="TEXT"
+    Expression="TEXT"
+    SQLType="BLOB"/>
+  <ViewAttribute
+    Name="CreateAt"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    AliasName="CREATE_AT"
+    Expression="CREATE_AT"
+    SQLType="TIMESTAMP"/>
+  <ViewAttribute
+    Name="UpdateAt"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    AliasName="UPDATE_AT"
+    Expression="UPDATE_AT"
+    SQLType="TIMESTAMP"/>
+  <ViewAttribute
+    Name="ProductEntryId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="15"
+    Scale="0"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="PRODUCT_ENTRY_ID"
+    Expression="PRODUCT_ENTRY_ID"
+    SQLType="NUMERIC"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="RecipeId"/>
+  </AttrArray>
+</ViewObject>
