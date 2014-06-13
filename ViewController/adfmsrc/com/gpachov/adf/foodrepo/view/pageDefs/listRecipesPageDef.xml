@@ -6,12 +6,23 @@
     <variableIterator id="variables"/>
     <page path="com.gpachov.adf.foodrepo.view.pageDefs.defaultPageDef" id="ptb1" Refresh="ifNeeded"/>
     <iterator Binds="RecipeView2" RangeSize="25" DataControl="AppModuleDataControl" id="RecipeView2Iterator"/>
+    <iterator Binds="RecipesView1" RangeSize="25" DataControl="AppModuleDataControl2" id="RecipesView1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="RecipeView2Iterator" id="RecipeView2">
       <nodeDefinition DefName="com.gpachov.adf.foodrepo.model.RecipeView" Name="RecipeView20">
         <AttrNames>
           <Item Value="RecipeId"/>
+          <Item Value="Author"/>
+          <Item Value="Title"/>
+          <Item Value="Description"/>
+          <Item Value="Timetomake"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="RecipesView1Iterator" id="RecipesView1">
+      <nodeDefinition DefName="com.gpachov.adf.foodrepo.RecipesView" Name="RecipesView10">
+        <AttrNames>
           <Item Value="Author"/>
           <Item Value="Title"/>
           <Item Value="Description"/>

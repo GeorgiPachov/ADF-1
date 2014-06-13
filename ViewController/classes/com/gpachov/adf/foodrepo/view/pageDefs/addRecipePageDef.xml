@@ -9,6 +9,7 @@
     <iterator Binds="RecipeView1" RangeSize="25" DataControl="AppModuleDataControl1" id="RecipeView1Iterator"
               ChangeEventPolicy="ppr"/>
     <iterator Binds="RecipesView1_1" RangeSize="25" DataControl="AppModuleDataControl2" id="RecipesView1_1Iterator"/>
+    <iterator Binds="RecipesView1" RangeSize="25" DataControl="AppModuleDataControl2" id="RecipesView1Iterator1"/>
   </executables>
   <bindings>
     <action IterBinding="RecipesView1Iterator" id="CreateInsert" InstanceName="AppModuleDataControl.RecipesView1"
@@ -66,6 +67,51 @@
     <attributeValues IterBinding="RecipesView1_1Iterator" id="Text1">
       <AttrNames>
         <Item Value="Text"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipesView1Iterator1" id="RecipeId">
+      <AttrNames>
+        <Item Value="RecipeId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipesView1Iterator1" id="Author2">
+      <AttrNames>
+        <Item Value="Author"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipesView1Iterator1" id="Title2">
+      <AttrNames>
+        <Item Value="Title"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipesView1Iterator1" id="Description2">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipesView1Iterator1" id="Timetomake2">
+      <AttrNames>
+        <Item Value="Timetomake"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipesView1Iterator1" id="Text2">
+      <AttrNames>
+        <Item Value="Text"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipesView1Iterator1" id="CreateAt">
+      <AttrNames>
+        <Item Value="CreateAt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipesView1Iterator1" id="UpdateAt">
+      <AttrNames>
+        <Item Value="UpdateAt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RecipesView1Iterator1" id="ProductEntryId">
+      <AttrNames>
+        <Item Value="ProductEntryId"/>
       </AttrNames>
     </attributeValues>
   </bindings>

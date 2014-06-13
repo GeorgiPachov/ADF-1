@@ -4,7 +4,7 @@
     <af:document title="main.jsf" id="d1">
         <af:form id="f1">
             <af:pageTemplate viewId="/default.jsf" value="#{bindings.ptb2}" id="pt1">
-                <f:attribute name="panelText" value="НАЧАЛО"/>
+                <f:attribute name="panelText" value="#{res['menu.main']}"/>
                 <f:facet name="body">
                     <af:panelBox id="pb1" inlineStyle="background-image: none;">
                         <af:outputFormatted value="#{res['main.welcomeMessage']}"

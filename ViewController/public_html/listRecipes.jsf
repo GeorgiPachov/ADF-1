@@ -5,23 +5,20 @@
         <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/default.jsf" value="#{bindings.ptb1}" id="pt1">
-                <f:attribute name="panelText" value="Разгледай рецепти"/>
+                <!--<f:attribute name="panelText" value="#{res['menu.listRecipes']}"/>-->
+                <f:attribute name="panelText" value="ВИЖ ВСИЧКИ РЕЦЕПТИ"/>
                 <f:facet name="body">
-                    <af:listView value="#{bindings.RecipeView2.collectionModel}" var="item"
-                                 emptyText="#{bindings.RecipeView2.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                 fetchSize="#{bindings.RecipeView2.rangeSize}" id="lv1">
+                    <af:listView value="#{bindings.RecipesView1.collectionModel}" var="item"
+                                 emptyText="#{bindings.RecipesView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                 fetchSize="#{bindings.RecipesView1.rangeSize}" id="lv1">
                         <af:listItem id="li1">
                             <af:panelGroupLayout id="pgl1">
-                                <af:outputFormatted value="#{item.bindings.RecipeId.inputValue}" id="of1">
+                                <af:outputFormatted value="#{item.bindings.Author.inputValue}" id="of1"/>
+                                <af:outputFormatted value="#{item.bindings.Title.inputValue}" id="of2"/>
+                                <af:outputFormatted value="#{item.bindings.Description.inputValue}" id="of3"/>
+                                <af:outputFormatted value="#{item.bindings.Timetomake.inputValue}" id="of4">
                                     <af:convertNumber groupingUsed="false"
-                                                      pattern="#{bindings.RecipeView2.hints.RecipeId.format}"/>
-                                </af:outputFormatted>
-                                <af:outputFormatted value="#{item.bindings.Author.inputValue}" id="of2"/>
-                                <af:outputFormatted value="#{item.bindings.Title.inputValue}" id="of3"/>
-                                <af:outputFormatted value="#{item.bindings.Description.inputValue}" id="of4"/>
-                                <af:outputFormatted value="#{item.bindings.Timetomake.inputValue}" id="of5">
-                                    <af:convertNumber groupingUsed="false"
-                                                      pattern="#{bindings.RecipeView2.hints.Timetomake.format}"/>
+                                                      pattern="#{bindings.RecipesView1.hints.Timetomake.format}"/>
                                 </af:outputFormatted>
                             </af:panelGroupLayout>
                         </af:listItem>

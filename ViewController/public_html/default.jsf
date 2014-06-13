@@ -22,7 +22,7 @@
                         <af:panelStretchLayout topHeight="30" id="pt_psl1" bottomHeight="600"
                                                inlineStyle="height: 220px; width:1031px;">
                             <f:facet name="top">
-                                <af:panelHeader text="#{attrs.panelText}" id="pt_ph1">
+                                <af:panelHeader text="Вие се намирате на: #{attrs.panelText}" id="pt_ph1">
                                     <f:facet name="menuBar">
                                         <af:navigationPane id="pt_np1" value="#{root_menu}" var="n" hint="buttons">
                                             <f:facet name="nodeStamp">
